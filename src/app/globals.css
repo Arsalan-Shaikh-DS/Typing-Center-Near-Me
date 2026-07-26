@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Colors (from original tailwind.config, Premium Dark Green + Gold theme) ---- */
+  --color-surface-bright: #f8f9fa;
+  --color-surface: #f8f9fa;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #306854;
+  --color-on-tertiary-fixed: #1a1c1c;
+  --color-on-primary: #ffffff;
+  --color-primary: #003526;
+  --color-on-primary-fixed: #002116;
+  --color-primary-fixed-dim: #98d3b9;
+  --color-inverse-surface: #2e3132;
+  --color-background: #f8f9fa;
+  --color-on-background: #191c1d;
+  --color-primary-fixed: #b4efd5;
+  --color-on-surface: #191c1d;
+  --color-secondary-fixed: #ffe088;
+  --color-secondary: #735c00;
+  --color-primary-container: #0f4d3a;
+  --color-on-tertiary: #ffffff;
+  --color-surface-variant: #e1e3e4;
+  --color-secondary-container: #fed65b;
+  --color-on-surface-variant: #404944;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #745c00;
+  --color-outline-variant: #bfc9c2;
+  --color-outline: #707974;
+  --color-surface-container-highest: #e1e3e4;
+  --color-secondary-fixed-dim: #e9c349;
+  --color-tertiary: #2c2e2e;
+  --color-inverse-on-surface: #f0f1f2;
+  --color-tertiary-container: #424444;
+  --color-tertiary-fixed-dim: #c6c6c7;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container: #edeeef;
+  --color-on-primary-fixed-variant: #14503d;
+  --color-on-secondary-fixed-variant: #574500;
+  --color-surface-dim: #d9dadb;
+  --color-on-secondary-fixed: #241a00;
+  --color-on-tertiary-fixed-variant: #454747;
+  --color-surface-container-low: #f3f4f5;
+  --color-tertiary-fixed: #e2e2e2;
+  --color-on-primary-container: #83bda4;
+  --color-on-tertiary-container: #b0b1b1;
+  --color-error: #ba1a1a;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-primary: #98d3b9;
+
+  /* ---- Border radius ---- */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ---- Spacing ---- */
+  --spacing-margin-desktop: 64px;
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+
+  /* ---- Fonts ---- */
+  --font-display-lg: var(--font-be-vietnam-pro), sans-serif;
+  --font-body-md: var(--font-inter), sans-serif;
+  --font-label-md: var(--font-inter), sans-serif;
+  --font-body-lg: var(--font-inter), sans-serif;
+  --font-headline-md: var(--font-be-vietnam-pro), sans-serif;
+  --font-headline-lg: var(--font-be-vietnam-pro), sans-serif;
+  --font-headline-lg-mobile: var(--font-be-vietnam-pro), sans-serif;
+
+  /* ---- Font sizes (with line-height/tracking/weight pairs) ---- */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 1.2;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 1.2;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 1.4;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 1.3;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 1.3;
+  --text-headline-lg-mobile--font-weight: 600;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+/* Swap the Latin display/body fonts for Arabic-optimized fonts on RTL pages.
+   Utilities like font-display-lg / font-body-md resolve these CSS variables
+   at paint time, so this override applies without touching every component. */
+html[dir="rtl"] {
+  --font-display-lg: var(--font-noto-kufi-arabic), sans-serif;
+  --font-body-md: var(--font-ibm-plex-arabic), sans-serif;
+  --font-label-md: var(--font-ibm-plex-arabic), sans-serif;
+  --font-body-lg: var(--font-ibm-plex-arabic), sans-serif;
+  --font-headline-md: var(--font-noto-kufi-arabic), sans-serif;
+  --font-headline-lg: var(--font-noto-kufi-arabic), sans-serif;
+  --font-headline-lg-mobile: var(--font-noto-kufi-arabic), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Default focus-visible ring for any interactive element without an explicit one */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.gold-bg {
+  background: linear-gradient(135deg, #f0d675 0%, #d4af37 55%, #c9a02e 100%);
+}
+.glass-panel {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.icon-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Material Symbols (icon font used throughout the original markup) */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
