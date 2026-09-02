@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "services": "Services",
+    "locations": "Locations",
+    "blog": "Blog",
+    "faqs": "FAQs",
+    "contact": "Contact",
+    "reviews": "Reviews",
+    "callNow": "Call Now",
+    "viewAllServices": "View all services",
+    "viewAllLocations": "View all locations",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "badge": "UAE's Premium Typing Service Centre",
+    "titleLine1": "Effortless Typing",
+    "titleLine2": "Services in UAE",
+    "subtitle": "Visa Typing • Emirates ID • Medical • PRO Services. Experience concierge-level facilitation with precision and speed.",
+    "ctaExplore": "Explore Services",
+    "trustSameDay": "Same Day Service",
+    "trustSupport": "24/7 Support"
+  },
+  "howItWorks": {
+    "eyebrow": "How It Works",
+    "headingLine1": "No visits, no queues —",
+    "headingLine2": "just upload, relax, and track every stage.",
+    "steps": [
+      { "title": "Choose Service", "description": "Pick the government service you need from our catalogue." },
+      { "title": "Upload Documents", "description": "Securely send your papers via the portal or WhatsApp." },
+      { "title": "We Type & Submit", "description": "Certified typists prepare and file with the authority." },
+      { "title": "Track Live", "description": "Watch real-time progress and pay fees online." },
+      { "title": "Receive", "description": "Get your approved document digitally or by courier." }
+    ]
+  },
+  "stats": {
+    "eyebrow": "Why Choose Us",
+    "heading": "Trusted by Thousands in the Emirates",
+    "description": "Our commitment to excellence and efficiency has made us the preferred choice for individuals and corporations.",
+    "features": [
+      { "title": "Reliable & Secure", "description": "Your documents are handled with the highest level of confidentiality." },
+      { "title": "Fast & Efficient", "description": "We value your time and deliver results, quickly and accurately." }
+    ],
+    "labels": {
+      "clients": "Happy Clients",
+      "experience": "Years Experience",
+      "turnaround": "Avg. Turnaround",
+      "compliance": "Compliance"
+    }
+  },
+  "servicesSection": {
+    "eyebrow": "Our Expertise",
+    "heading": "Comprehensive Typing Solutions",
+    "description": "Streamlined processing for all your governmental and corporate documentation needs in the UAE.",
+    "learnMore": "Learn More",
+    "viewAll": "View All Services"
+  },
+  "locationsSection": {
+    "heading": "Serving All 7 Emirates",
+    "description": "Wherever you are in the UAE, Typing Center Near Me brings the same concierge-level documentation service to you.",
+    "viewCities": "View Cities"
+  },
+  "guidesSection": {
+    "heading": "Latest Guides & Updates",
+    "description": "Stay informed with the latest governmental procedures and requirements.",
+    "viewAll": "View All Guides"
+  },
+  "faqSection": {
+    "heading": "Frequently Asked Questions",
+    "description": "Find answers to common queries about our typing and documentation services."
+  },
+  "reviewsSection": {
+    "heading": "What Our Customers Say",
+    "rating": "{average}/5 Based on {count}+ Happy Customers"
+  },
+  "footer": {
+    "servicesHeading": "Services",
+    "locationsHeading": "Locations",
+    "companyHeading": "Company",
+    "blog": "Blog",
+    "faqs": "FAQs",
+    "reviews": "Reviews",
+    "contact": "Contact",
+    "stayUpdated": "Stay Updated",
+    "copyright": "© {year} Typing Center Near Me. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms"
+  },
+  "newsletter": {
+    "placeholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribing": "…",
+    "subscribed": "Subscribed! Watch your inbox for updates."
+  },
+  "contactForm": {
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "successTitle": "Message sent",
+    "successBody": "We'll get back to you within one business day.",
+    "sendAnother": "Send another message"
+  },
+  "enquiryForm": {
+    "title": "Request Callback",
+    "subtitle": "Skip the queue. Our experts will contact you shortly.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Mohammed",
+    "phone": "Phone Number",
+    "serviceRequired": "Service Required",
+    "selectService": "Select a service",
+    "submit": "Submit Request",
+    "submitting": "Submitting…",
+    "successTitle": "Request received",
+    "successBody": "Our team will contact you as soon as possible.",
+    "submitAnother": "Submit another request",
+    "secureNote": "Your information is secure"
+  },
+  "miniEnquiryForm": {
+    "title": "Quick Enquiry",
+    "subtitle": "Leave your number and we'll call you back.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Mohammed",
+    "phone": "Phone Number",
+    "submit": "Request Callback",
+    "submitting": "Sending…",
+    "successTitle": "Thank you!",
+    "successBody": "We'll call you back shortly.",
+    "submitAnother": "Submit another request",
+    "secureNote": "Your information is secure"
+  },
+  "enquiryPopup": {
+    "title": "Need help today?",
+    "subtitle": "Leave your name and number — our team will call you back within minutes.",
+    "close": "Close",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Mohammed",
+    "phone": "Phone Number",
+    "submit": "Request Callback",
+    "submitting": "Sending…",
+    "successTitle": "Thank you!",
+    "successBody": "We'll call you back shortly.",
+    "secureNote": "Your information is secure"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "body": "The page you're looking for doesn't exist or may have moved.",
+    "backHome": "Back to Home",
+    "browseServices": "Browse Services"
+  },
+  "loading": "Loading…",
+  "globalError": {
+    "title": "Something went wrong",
+    "body": "We've logged the issue. Please try again, or contact us directly if the problem persists.",
+    "tryAgain": "Try Again",
+    "backHome": "Back to Home"
+  },
+  "servicesPage": {
+    "eyebrow": "Our Expertise",
+    "heading": "All UAE Government & Typing Services",
+    "description": "Every service is handled by licensed consultants, from document typing to final government submission.",
+    "learnMore": "Learn More"
+  },
+  "serviceDetail": {
+    "titleSuffix": "in Dubai",
+    "benefits": "Benefits",
+    "requiredDocuments": "Required Documents",
+    "process": "Our Process",
+    "faqsHeading": "Frequently Asked Questions",
+    "relatedServices": "Related Services",
+    "readyToStart": "Ready to get started?",
+    "talkToSpecialist": "Talk to a specialist about your {service} application today.",
+    "call": "Call",
+    "requestCallback": "Request Callback"
+  },
+  "locationsPage": {
+    "heading": "Locations We Serve Across the UAE",
+    "description": "Professional typing and government documentation services across all 7 emirates.",
+    "viewCities": "View Cities"
+  },
+  "locationDetail": {
+    "titlePrefix": "Typing & Government Services in",
+    "citiesWeCover": "Cities We Cover in {location}",
+    "whyChooseUs": "Why Choose Us in {location}",
+    "getDirections": "Get Driving Directions",
+    "servicesAvailable": "Services Available in {location}",
+    "whatCustomersSay": "What Customers Say",
+    "visitUsToday": "Visit us in {location} today",
+    "call": "Call"
+  },
+  "blogPage": {
+    "heading": "Latest Guides & Updates",
+    "description": "Stay informed with the latest governmental procedures and requirements."
+  },
+  "blogDetail": {
+    "inThisArticle": "In this article",
+    "share": "Share:",
+    "previous": "Previous",
+    "next": "Next",
+    "relatedGuides": "Related Guides"
+  },
+  "contactPage": {
+    "heading": "Get in Touch",
+    "description": "Have a question about a service or need a custom quote? Send us a message and a specialist will respond within one business day.",
+    "whatsappUs": "WhatsApp Us",
+    "hours": "Sat–Thu: 9:00 AM – 8:00 PM"
+  },
+  "legal": {
+    "lastUpdated": "Last updated:"
+  },
+  "language": {
+    "en": "English",
+    "ar": "العربية",
+    "switchTo": "Switch to {language}"
+  }
+}
