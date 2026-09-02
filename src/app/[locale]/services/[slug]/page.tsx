@@ -84,6 +84,11 @@ export default async function ServiceDetailPage({
               </p>
             </div>
 
+            {/* Mobile-only enquiry form — appears above Benefits on small screens */}
+            <div className="lg:hidden">
+              <MiniEnquiryForm source={`Service: ${title}`} />
+            </div>
+
             {/* Benefits */}
             <section>
               <h2 className="font-headline-lg text-headline-md text-primary mb-6">{t("benefits")}</h2>
@@ -187,7 +192,9 @@ export default async function ServiceDetailPage({
                 </a>
               </div>
 
-              <MiniEnquiryForm source={`Service: ${title}`} />
+              <div className="hidden lg:block">
+                <MiniEnquiryForm source={`Service: ${title}`} />
+              </div>
             </div>
           </aside>
         </div>

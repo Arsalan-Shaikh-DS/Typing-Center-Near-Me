@@ -6,12 +6,6 @@ import { locations } from "@/lib/data/locations";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { pick } from "@/lib/i18n-helpers";
 
-const socialLinks = [
-  { label: "Facebook", icon: "facebook", href: "#" },
-  { label: "Instagram", icon: "photo_camera", href: "#" },
-  { label: "LinkedIn", icon: "business_center", href: "#" },
-];
-
 export async function Footer() {
   const t = await getTranslations("footer");
   const locale = await getLocale();
@@ -31,18 +25,6 @@ export async function Footer() {
           <p className="font-body-md text-sm text-white/70 max-w-xs mb-6">
             {pick(locale, siteConfig.description, siteConfig.descriptionAr)}
           </p>
-          <div className="flex gap-3">
-            {socialLinks.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                aria-label={s.label}
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-colors"
-              >
-                <span className="material-symbols-outlined text-[20px]">{s.icon}</span>
-              </a>
-            ))}
-          </div>
         </div>
 
         <div>

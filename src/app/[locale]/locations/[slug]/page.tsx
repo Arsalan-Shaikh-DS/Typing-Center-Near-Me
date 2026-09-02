@@ -109,6 +109,8 @@ export default async function LocationDetailPage({
             </div>
           </section>
 
+          <MiniEnquiryForm source={`Location: ${name}`} />
+
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Map */}
             <div className="rounded-2xl overflow-hidden border border-surface-variant h-80 lg:h-full min-h-80">
@@ -193,21 +195,17 @@ export default async function LocationDetailPage({
           </section>
 
           {/* CTA */}
-          <div className="grid lg:grid-cols-2 gap-6 items-stretch">
-            <div className="glass-panel bg-white border border-surface-variant rounded-2xl p-10 text-center flex flex-col items-center justify-center">
-              <h3 className="font-headline-lg text-headline-md text-primary mb-3">
-                {t("visitUsToday", { location: name })}
-              </h3>
-              <a
-                href={`tel:${siteConfig.phone}`}
-                className="inline-flex items-center gap-2 bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-colors"
-              >
-                <span className="material-symbols-outlined text-[20px]">phone_in_talk</span>
-                {t("call")} <span dir="ltr">{siteConfig.phoneDisplay}</span>
-              </a>
-            </div>
-
-            <MiniEnquiryForm source={`Location: ${name}`} />
+          <div className="glass-panel bg-white border border-surface-variant rounded-2xl p-10 text-center">
+            <h3 className="font-headline-lg text-headline-md text-primary mb-3">
+              {t("visitUsToday", { location: name })}
+            </h3>
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="inline-flex items-center gap-2 bg-primary text-white font-label-md text-label-md px-8 py-4 rounded-full hover:bg-primary-container transition-colors"
+            >
+              <span className="material-symbols-outlined text-[20px]">phone_in_talk</span>
+              {t("call")} <span dir="ltr">{siteConfig.phoneDisplay}</span>
+            </a>
           </div>
         </div>
       </main>
