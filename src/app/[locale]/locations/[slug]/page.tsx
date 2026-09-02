@@ -109,9 +109,9 @@ export default async function LocationDetailPage({
             </div>
           </section>
 
-          <MiniEnquiryForm source={`Location: ${name}`} />
+          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
+            <MiniEnquiryForm source={`Location: ${name}`} />
 
-          <div className="grid lg:grid-cols-2 gap-10">
             {/* Map */}
             <div className="rounded-2xl overflow-hidden border border-surface-variant h-80 lg:h-full min-h-80">
               <iframe
@@ -122,33 +122,31 @@ export default async function LocationDetailPage({
                 src={`https://www.google.com/maps?q=${location.lat},${location.lng}&z=10&output=embed`}
               />
             </div>
+          </div>
 
-            <div className="space-y-8">
-              {/* Why Choose Us */}
-              <div>
-                <h2 className="font-headline-lg text-headline-md text-primary mb-4">
-                  {t("whyChooseUs", { location: name })}
-                </h2>
-                <ul className="space-y-2">
-                  {pick(locale, location.whyChooseUs, location.whyChooseUsAr).map((reason) => (
-                    <li key={reason} className="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
-                      <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-                      {reason}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {/* Why Choose Us */}
+          <div className="space-y-6">
+            <h2 className="font-headline-lg text-headline-md text-primary">
+              {t("whyChooseUs", { location: name })}
+            </h2>
+            <ul className="grid sm:grid-cols-2 gap-3">
+              {pick(locale, location.whyChooseUs, location.whyChooseUsAr).map((reason) => (
+                <li key={reason} className="flex items-start gap-2 font-body-md text-body-md text-on-surface-variant">
+                  <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+                  {reason}
+                </li>
+              ))}
+            </ul>
 
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border-2 border-primary text-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary/5 transition-colors"
-              >
-                <span className="material-symbols-outlined text-[20px]">directions</span>
-                {t("getDirections")}
-              </a>
-            </div>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-primary text-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary/5 transition-colors"
+            >
+              <span className="material-symbols-outlined text-[20px]">directions</span>
+              {t("getDirections")}
+            </a>
           </div>
 
           {/* Services Available */}
