@@ -1,0 +1,30 @@
+{
+  "node": {
+    "607a786ca16d69860386be779797d05ea01359ea8e": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/contact.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/enquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "subscribeNewsletter",
+          "filename": "src/app/actions/contact.ts"
+        }
+      },
+      "filename": "src/app/actions/contact.ts",
+      "exportedName": "subscribeNewsletter"
+    },
+    "603bb14acf28750da1e788ddfde00c258107706600": {
+      "workers": {
+        "app/[locale]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[locale]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions/contact.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/actions/enquiry.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "submitEnquiry",
+          "filename": "src/app/actions/enquiry.ts"
+        }
+      },
+      "filename": "src/app/actions/enquiry.ts",
+      "exportedName": "submitEnquiry"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "gb9209lvHKXYOlTlXrd2b4bQQ2MpuUKtGVZV5HxtNao="
+}
