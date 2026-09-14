@@ -119,7 +119,7 @@ export default async function LocationDetailPage({
                 className="w-full h-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps?q=${location.lat},${location.lng}&z=10&output=embed`}
+                src={`https://www.google.com/maps?q=${siteConfig.geo.lat},${siteConfig.geo.lng}&z=14&output=embed`}
               />
             </div>
           </div>
@@ -139,7 +139,7 @@ export default async function LocationDetailPage({
             </ul>
 
             <a
-              href={`https://www.google.com/maps/dir/?api=1&destination=${location.lat},${location.lng}`}
+              href={`https://www.google.com/maps/dir/?api=1&destination=${siteConfig.geo.lat},${siteConfig.geo.lng}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-2 border-primary text-primary font-label-md text-label-md px-6 py-3 rounded-full hover:bg-primary/5 transition-colors"

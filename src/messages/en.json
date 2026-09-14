@@ -53,6 +53,8 @@
     "heading": "Comprehensive Typing Solutions",
     "description": "Streamlined processing for all your governmental and corporate documentation needs in the UAE.",
     "learnMore": "Learn More",
+    "startApplication": "Start Application / WhatsApp",
+    "allTab": "All",
     "viewAll": "View All Services"
   },
   "locationsSection": {
@@ -70,7 +72,9 @@
     "description": "Find answers to common queries about our typing and documentation services."
   },
   "reviewsSection": {
+    "eyebrow": "Client Stories",
     "heading": "What Our Customers Say",
+    "subtitle": "Real experiences from real clients",
     "rating": "{average}/5 Based on {count}+ Happy Customers"
   },
   "footer": {
@@ -164,7 +168,9 @@
     "eyebrow": "Our Expertise",
     "heading": "All UAE Government & Typing Services",
     "description": "Every service is handled by licensed consultants, from document typing to final government submission.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "startApplication": "Start Application / WhatsApp",
+    "allTab": "All"
   },
   "serviceDetail": {
     "titleSuffix": "in Dubai",

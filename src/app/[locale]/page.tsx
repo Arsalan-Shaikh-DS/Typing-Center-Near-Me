@@ -41,10 +41,10 @@ export default async function HomePage() {
       <Header />
       <main id="main-content">
         <Hero />
-        <HowItWorksSection />
-        <ServicesSection />
-        <LocationsSection />
         <StatsSection />
+        <ServicesSection />
+        <HowItWorksSection />
+        <LocationsSection />
         <GuidesSection />
         <FaqSection />
         <ReviewsSection />
