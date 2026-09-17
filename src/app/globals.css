@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Colors (Navy Blue + Red theme, replacing the original Green + Gold) ---- */
+  --color-surface-bright: #f8f9fc;
+  --color-surface: #f8f9fc;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #2b5d9e;
+  --color-on-tertiary-fixed: #1a1c22;
+  --color-on-primary: #ffffff;
+  --color-primary: #0b2e59;
+  --color-on-primary-fixed: #001b3d;
+  --color-primary-fixed-dim: #a8c5f0;
+  --color-inverse-surface: #2e3036;
+  --color-background: #f8f9fc;
+  --color-on-background: #191c20;
+  --color-primary-fixed: #d6e3ff;
+  --color-on-surface: #191c20;
+  --color-secondary-fixed: #8c1116;
+  --color-secondary: #8c1116;
+  --color-primary-container: #123b72;
+  --color-on-tertiary: #ffffff;
+  --color-surface-variant: #dfe2e9;
+  --color-secondary-container: #8c1116;
+  --color-on-surface-variant: #43474e;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #ffffff;
+  --color-outline-variant: #c3c6cf;
+  --color-outline: #73777f;
+  --color-surface-container-highest: #e2e2e9;
+  --color-secondary-fixed-dim: #8c1116;
+  --color-tertiary: #43474e;
+  --color-inverse-on-surface: #f0f0f7;
+  --color-tertiary-container: #434750;
+  --color-tertiary-fixed-dim: #c6c6d1;
+  --color-surface-container-high: #e7e7ee;
+  --color-surface-container: #ededf4;
+  --color-on-primary-fixed-variant: #2c5585;
+  --color-on-secondary-fixed-variant: #ffffff;
+  --color-surface-dim: #d9d9e0;
+  --color-on-secondary-fixed: #ffffff;
+  --color-on-tertiary-fixed-variant: #45474f;
+  --color-surface-container-low: #f3f3fa;
+  --color-tertiary-fixed: #e2e2eb;
+  --color-on-primary-container: #a9c7f5;
+  --color-on-tertiary-container: #c7c8d1;
+  --color-error: #ba1a1a;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-primary: #a8c5f0;
+
+  /* ---- Border radius ---- */
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  /* ---- Spacing ---- */
+  --spacing-margin-desktop: 64px;
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+  --spacing-margin-mobile: 16px;
+
+  /* ---- Fonts ---- */
+  --font-display-lg: var(--font-be-vietnam-pro), sans-serif;
+  --font-body-md: var(--font-inter), sans-serif;
+  --font-label-md: var(--font-inter), sans-serif;
+  --font-body-lg: var(--font-inter), sans-serif;
+  --font-headline-md: var(--font-be-vietnam-pro), sans-serif;
+  --font-headline-lg: var(--font-be-vietnam-pro), sans-serif;
+  --font-headline-lg-mobile: var(--font-be-vietnam-pro), sans-serif;
+
+  /* ---- Font sizes (with line-height/tracking/weight pairs) ---- */
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 1.2;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.6;
+  --text-body-md--font-weight: 400;
+
+  --text-label-md: 14px;
+  --text-label-md--line-height: 1.2;
+  --text-label-md--letter-spacing: 0.05em;
+  --text-label-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 1.4;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 1.3;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 1.3;
+  --text-headline-lg-mobile--font-weight: 600;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+/* Swap the Latin display/body fonts for Arabic-optimized fonts on RTL pages.
+   Utilities like font-display-lg / font-body-md resolve these CSS variables
+   at paint time, so this override applies without touching every component. */
+html[dir="rtl"] {
+  --font-display-lg: var(--font-noto-kufi-arabic), sans-serif;
+  --font-body-md: var(--font-ibm-plex-arabic), sans-serif;
+  --font-label-md: var(--font-ibm-plex-arabic), sans-serif;
+  --font-body-lg: var(--font-ibm-plex-arabic), sans-serif;
+  --font-headline-md: var(--font-noto-kufi-arabic), sans-serif;
+  --font-headline-lg: var(--font-noto-kufi-arabic), sans-serif;
+  --font-headline-lg-mobile: var(--font-noto-kufi-arabic), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Default focus-visible ring for any interactive element without an explicit one */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.accent-bg {
+  background: #8c1116;
+}
+.glass-panel {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.icon-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Material Symbols (icon font used throughout the original markup) */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
